@@ -427,32 +427,109 @@ GOOD LUCK 😀
 // console.log(scorers);
 
 // 120. Sets
-const italianFoods = new Set([
-  'pasta',
-  'gnocchi',
-  'tomatoes',
-  'olive oil',
-  'garlic',
-  'basil',
+// const italianFoods = new Set([
+//   'pasta',
+//   'gnocchi',
+//   'tomatoes',
+//   'olive oil',
+//   'garlic',
+//   'basil',
+// ]);
+
+// const mexicanFoods = new Set([
+//   'tortillas',
+//   'beans',
+//   'rice',
+//   'tomatoes',
+//   'avocado',
+//   'garlic',
+// ]);
+
+// const commonFoods = italianFoods.intersection(mexicanFoods);
+
+// // console.log(commonFoods);
+
+// const commonFoodsArr = [...commonFoods];
+
+// // console.log(commonFoodsArr);
+
+// const italianMexicanFusion = italianFoods.union(mexicanFoods);
+
+// // console.log(italianMexicanFusion);
+
+// // 123. Maps: iteration
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'Correct!'],
+//   [false, 'Try again!'],
+// ]);
+
+// // console.log(question.get('question'));
+// // for (const [key, value] of question) {
+// //   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// // }
+
+// // const answer = Number(prompt('Your answer'));
+// // console.log(answer);
+
+// // console.log(question.get(question.get('correct') === answer));
+
+// const questionArr = [...question];
+// // console.log(questionArr);
+
+// // console.log([...question.keys()]);
+
+// Challenge #3
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
 ]);
 
-const mexicanFoods = new Set([
-  'tortillas',
-  'beans',
-  'rice',
-  'tomatoes',
-  'avocado',
-  'garlic',
-]);
+/*
+// 1.
+const events = [...new Set(gameEvents.values())];
+// console.log(events);
 
-const commonFoods = italianFoods.intersection(mexicanFoods);
+// 2.
+gameEvents.delete(64);
+// console.log(gameEvents);
 
-// console.log(commonFoods);
+// 3.
+console.log(
+  `An event happened, on average, every ${90 / gameEvents.size} minutes.`
+);
 
-const commonFoodsArr = [...commonFoods];
+// 4.
+for (const [minute, event] of gameEvents) {
+  // if (minute <= 45) {
+  //   console.log(`[FIRST HALF] ${minute}: ${event}`);
+  // } else {
+  //   console.log(`[SECOND HALF] ${minute}: ${event}`);
+  // }
 
-// console.log(commonFoodsArr);
+  console.log(
+    `${minute <= 45 ? '[FIRST HALF]' : '[SECOND HALF]'} ${minute}: ${event}`
+  );
+}
+*/
 
-const italianMexicanFusion = italianFoods.union(mexicanFoods);
+// 126. Working with strings
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
 
-console.log(italianMexicanFusion);
+console.log(airline.slice(airline[0], airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));

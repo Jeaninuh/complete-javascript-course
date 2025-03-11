@@ -499,7 +499,6 @@ for (const [index, value] of Object.values(
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
 
 console.log(entries2);
-*/
 
 // 12.1
 const allKeywords = [];
@@ -532,3 +531,58 @@ const uniqueKeywordsArr = [...uniqueKeywords];
 // 12.6
 uniqueKeywords.clear();
 console.log(uniqueKeywords);
+
+// 13.1
+
+const bookMap = new Map([
+  ['title', 'Clean Code'],
+  ['author', 'Robert C. Martin'],
+]);
+
+console.log(bookMap);
+
+// 13.2
+// bookMap.set('pages', 464);
+// console.log(bookMap);
+
+// 13.3
+// console.log(`${bookMap.get('title')} by ${bookMap.get('author')}`);
+
+// 13.4
+// console.log(bookMap.size);
+
+// 13.5
+// bookMap.has('author') && console.log('The author of the book is known');
+
+// 14.1
+const firstBookMap = new Map(Object.entries(books[0]));
+
+console.log(firstBookMap);
+
+// 14.2
+for (const [key, value] of firstBookMap) {
+  if (typeof key === 'number') console.log(key);
+}
+*/
+
+// 15.1
+// console.log(books[0].ISBN['6']);
+// console.log(books[0].ISBN['4']);
+// console.log(books[0].ISBN['9']);
+// console.log(books[0].ISBN['8']);
+
+// 15.2
+const quote =
+  'A computer once beat me at chess, but it was no match for me at kick boxing';
+
+// console.log(quote.indexOf('chess'));
+
+// 15.3
+// console.log(quote.slice(quote.indexOf('boxing')));
+
+// 15.4
+const isContributor = function (author) {
+  return author.indexOf('(Contributor)') !== -1;
+};
+
+console.log(isContributor('Robert Sedgewick'));
